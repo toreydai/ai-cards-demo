@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Build
+tsconfig.tsbuildinfo
+
+# Environment
+.env
+.env.local
+.env*.local
+
+# OS
+.DS_Store
+
+# IDE
+.c9/
+
+# Local ops docs
+CLAUDE.md
