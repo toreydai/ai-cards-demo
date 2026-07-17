@@ -47,7 +47,7 @@ npm run build
 npm start          # 同样运行在端口 3002
 ```
 
-## 项目结构
+## 目录结构
 
 ```
 app/
@@ -61,8 +61,9 @@ app/
     CardPanel.tsx           卡组面板（Mission / Task / Agent / Skill / Infra）
   lib/
     stream-chat.ts          流式 fetch 工具函数
-testing/
-  TESTING.md                各桌测试场景与验证方法
+docs/
+  architecture.md           架构图
+  testing.md                各桌测试场景与验证方法
 ```
 
 ## 添加新场景
@@ -76,7 +77,11 @@ testing/
 
 ## 测试
 
-各桌测试场景和验证点见 [`testing/TESTING.md`](testing/TESTING.md)。
+各桌测试场景和验证点见 [`docs/testing.md`](docs/testing.md)。
+
+## License
+
+MIT - see the [LICENSE](LICENSE) file for details.
 
 ## 免责声明
 
