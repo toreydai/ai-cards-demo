@@ -28,6 +28,7 @@
 1. Node.js 18+
 2. AWS 凭证，具备 `bedrock:InvokeModelWithResponseStream` 权限
 3. 在 `us-east-1` 的 Bedrock 控制台开通 Kimi K2.5 模型访问（`moonshotai.kimi-k2.5`）
+4. 设置至少 32 字符的 `CHAT_ACCESS_KEY`（例如通过 `openssl rand -hex 32` 生成），仅向参加工作坊的人提供。未配置时，聊天 API 拒绝调用。
 
 ## 快速开始
 
@@ -35,6 +36,7 @@
 git clone <this-repo>
 cd ai-cards-demo
 npm install
+export CHAT_ACCESS_KEY="$(openssl rand -hex 32)"
 npm run dev        # 启动开发服务器，端口 3002
 ```
 
@@ -46,6 +48,8 @@ npm run dev        # 启动开发服务器，端口 3002
 npm run build
 npm start          # 同样运行在端口 3002
 ```
+
+生产部署时，通过服务端环境变量或密钥管理服务配置 `CHAT_ACCESS_KEY`。聊天接口设有每实例每分钟 30 次调用限制；若公开部署，仍应在入口配置集中式限流与 AWS 预算告警。
 
 ## 目录结构
 
